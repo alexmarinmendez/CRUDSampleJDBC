@@ -18,8 +18,18 @@ public class MyConnection {
 		return cx;
 	}
 	
+	public void disconnect() {
+		try {
+			cx.close();
+			System.out.println("Disconnected :)");
+		} catch (SQLException e) {
+			System.out.println("A problem occurs when trying to disconnect :(");
+		}
+	}
+	
 	public static void main(String[] args) {
 		MyConnection cx = new MyConnection();
 		cx.connect();
+		cx.disconnect();
 	}
 }
