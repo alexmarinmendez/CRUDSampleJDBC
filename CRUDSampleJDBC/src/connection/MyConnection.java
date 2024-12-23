@@ -22,7 +22,7 @@ public class MyConnection {
 		try {
 			cx.close();
 			System.out.println("Disconnected :)");
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			System.out.println("A problem occurs when trying to disconnect :(");
 		}
 	}
